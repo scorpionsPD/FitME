@@ -1,0 +1,6 @@
+framework module Pods_FitMeApp {
+  umbrella header "Pods-FitMeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
