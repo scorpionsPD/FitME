@@ -31,7 +31,7 @@ import Foundation
 
 extension CoreDataHelper {
     
-    func insertRecord<T:NSManagedObject>(entity:T.Type, entityName:String, completion:(NSManagedObject, NSManagedObjectContext)->()){
+    class func insertRecord<T:NSManagedObject>(entity:T.Type, entityName:String, completion:(NSManagedObject, NSManagedObjectContext)->()){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedObjectContext = appDelegate.persistentContainer.viewContext
         //Create new Object of entity

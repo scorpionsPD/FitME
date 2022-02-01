@@ -19,8 +19,16 @@
 		FB25903327A3D9E400B93DE1 /* StepsTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25903227A3D9E400B93DE1 /* StepsTargetModel.swift */; };
 		FB25903827A3DB5500B93DE1 /* CollectionViewCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25903627A3DB5500B93DE1 /* CollectionViewCarouselFlowLayout.swift */; };
 		FB25903C27A3DCA200B93DE1 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25903B27A3DCA200B93DE1 /* CarouselCollectionViewCell.swift */; };
+		FB9383B027A8125A007D0EDB /* CustomPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9383AE27A8125A007D0EDB /* CustomPopupView.xib */; };
+		FB9383B127A8125A007D0EDB /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9383AF27A8125A007D0EDB /* CustomPopupView.swift */; };
+		FB9383B327A81481007D0EDB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9383B227A81481007D0EDB /* UIViewControllerExtension.swift */; };
 		FB9C1E0627A29AB400C9C09B /* FitMeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1E0427A29AB400C9C09B /* FitMeApp.xcdatamodeld */; };
 		FB9C1E0827A29AB500C9C09B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1E0727A29AB500C9C09B /* Assets.xcassets */; };
+		FBA701FB27A7E0DE000C7E9F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA701FA27A7E0DE000C7E9F /* Constants.swift */; };
+		FBA701FD27A7E1BB000C7E9F /* ViewController+DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA701FC27A7E1BB000C7E9F /* ViewController+DBHelper.swift */; };
+		FBA7020027A7F32B000C7E9F /* ViewController+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA701FF27A7F32B000C7E9F /* ViewController+SetupUI.swift */; };
+		FBA7020227A7F35A000C7E9F /* ViewController+NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7020127A7F35A000C7E9F /* ViewController+NotificationCenter.swift */; };
+		FBA7021527A80715000C7E9F /* AddStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7021427A80715000C7E9F /* AddStepsViewController.swift */; };
 		FBDD0E9127A4146F002E38A7 /* TargetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD0E9027A4146F002E38A7 /* TargetDataSource.swift */; };
 		FBDD0E9427A41C0F002E38A7 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD0E9327A41C0F002E38A7 /* Instantiable.swift */; };
 /* End PBXBuildFile section */
@@ -40,10 +48,18 @@
 		FB25903227A3D9E400B93DE1 /* StepsTargetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsTargetModel.swift; sourceTree = "<group>"; };
 		FB25903627A3DB5500B93DE1 /* CollectionViewCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		FB25903B27A3DCA200B93DE1 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB9383AE27A8125A007D0EDB /* CustomPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopupView.xib; sourceTree = "<group>"; };
+		FB9383AF27A8125A007D0EDB /* CustomPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
+		FB9383B227A81481007D0EDB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FB9C1DF827A29AB400C9C09B /* FitMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9C1E0527A29AB400C9C09B /* FitMeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitMeApp.xcdatamodel; sourceTree = "<group>"; };
 		FB9C1E0727A29AB500C9C09B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB9C1E0C27A29AB500C9C09B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBA701FA27A7E0DE000C7E9F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FBA701FC27A7E1BB000C7E9F /* ViewController+DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DBHelper.swift"; sourceTree = "<group>"; };
+		FBA701FF27A7F32B000C7E9F /* ViewController+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SetupUI.swift"; sourceTree = "<group>"; };
+		FBA7020127A7F35A000C7E9F /* ViewController+NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NotificationCenter.swift"; sourceTree = "<group>"; };
+		FBA7021427A80715000C7E9F /* AddStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepsViewController.swift; sourceTree = "<group>"; };
 		FBDD0E9027A4146F002E38A7 /* TargetDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDataSource.swift; sourceTree = "<group>"; };
 		FBDD0E9327A41C0F002E38A7 /* Instantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				FB25902427A3D6FD00B93DE1 /* ViewController.swift */,
+				FBA701FC27A7E1BB000C7E9F /* ViewController+DBHelper.swift */,
+				FBA701FF27A7F32B000C7E9F /* ViewController+SetupUI.swift */,
+				FBA7020127A7F35A000C7E9F /* ViewController+NotificationCenter.swift */,
+				FBA7021427A80715000C7E9F /* AddStepsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FB25902827A3D6FD00B93DE1 /* DateExtension.swift */,
+				FB9383B227A81481007D0EDB /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +165,15 @@
 			path = CustomCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		FB9383AD27A8125A007D0EDB /* CustomPopup */ = {
+			isa = PBXGroup;
+			children = (
+				FB9383AE27A8125A007D0EDB /* CustomPopupView.xib */,
+				FB9383AF27A8125A007D0EDB /* CustomPopupView.swift */,
+			);
+			path = CustomPopup;
+			sourceTree = "<group>";
+		};
 		FB9C1DEF27A29AB400C9C09B = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +195,8 @@
 		FB9C1DFA27A29AB400C9C09B /* FitMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB9383AD27A8125A007D0EDB /* CustomPopup */,
+				FBA701F927A7E0CF000C7E9F /* Constants */,
 				FBDD0E9227A41C0F002E38A7 /* Utils */,
 				FBDD0E8F27A4145B002E38A7 /* DataSource */,
 				FB25903A27A3DCA200B93DE1 /* CustomCollectionViewCell */,
@@ -180,6 +212,14 @@
 				FB9C1E0427A29AB400C9C09B /* FitMeApp.xcdatamodeld */,
 			);
 			path = FitMeApp;
+			sourceTree = "<group>";
+		};
+		FBA701F927A7E0CF000C7E9F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FBA701FA27A7E0DE000C7E9F /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		FBDD0E8F27A4145B002E38A7 /* DataSource */ = {
@@ -260,6 +300,7 @@
 			files = (
 				FB25902B27A3D6FD00B93DE1 /* Main.storyboard in Resources */,
 				FB9C1E0827A29AB500C9C09B /* Assets.xcassets in Resources */,
+				FB9383B027A8125A007D0EDB /* CustomPopupView.xib in Resources */,
 				FB25902A27A3D6FD00B93DE1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,16 +355,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB25903C27A3DCA200B93DE1 /* CarouselCollectionViewCell.swift in Sources */,
+				FBA7020027A7F32B000C7E9F /* ViewController+SetupUI.swift in Sources */,
 				FB25903327A3D9E400B93DE1 /* StepsTargetModel.swift in Sources */,
 				FB25902F27A3D6FD00B93DE1 /* CoreDataHelper.swift in Sources */,
+				FBA7020227A7F35A000C7E9F /* ViewController+NotificationCenter.swift in Sources */,
+				FBA7021527A80715000C7E9F /* AddStepsViewController.swift in Sources */,
 				FB25903027A3D6FD00B93DE1 /* DateExtension.swift in Sources */,
 				FB25902E27A3D6FD00B93DE1 /* ViewController.swift in Sources */,
+				FB9383B127A8125A007D0EDB /* CustomPopupView.swift in Sources */,
 				FBDD0E9127A4146F002E38A7 /* TargetDataSource.swift in Sources */,
 				FB25902C27A3D6FD00B93DE1 /* AppDelegate.swift in Sources */,
+				FBA701FB27A7E0DE000C7E9F /* Constants.swift in Sources */,
 				FBDD0E9427A41C0F002E38A7 /* Instantiable.swift in Sources */,
 				FB25902927A3D6FD00B93DE1 /* EntityTypes.swift in Sources */,
 				FB9C1E0627A29AB400C9C09B /* FitMeApp.xcdatamodeld in Sources */,
 				FB25902D27A3D6FD00B93DE1 /* SceneDelegate.swift in Sources */,
+				FB9383B327A81481007D0EDB /* UIViewControllerExtension.swift in Sources */,
+				FBA701FD27A7E1BB000C7E9F /* ViewController+DBHelper.swift in Sources */,
 				FB25903827A3DB5500B93DE1 /* CollectionViewCarouselFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

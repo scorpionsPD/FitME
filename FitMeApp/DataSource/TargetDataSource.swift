@@ -8,11 +8,16 @@ import UIKit
 import Foundation
 
 class TargetDataSource: NSObject {
-    var dataArray : [StepsTarget]?
+    var dataArray:[StepsTarget]?
+    var collctionView:UICollectionView?
+    var pageSize:CGSize?
+    var onScroll:((Int)->())?
 
-    init(data:[StepsTarget]) {
+    init(data:[StepsTarget],pSize:CGSize,collectionView:UICollectionView) {
         super.init()
         self.dataArray = data
+        self.collctionView = collectionView
+        self.pageSize = pSize
     }
 }
 
@@ -32,5 +37,13 @@ extension TargetDataSource:UICollectionViewDataSource, UICollectionViewDelegate
             cell.getImageName(index: indexPath.item)
        }
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.collctionView!.collectionViewLayout as! CollectionViewCarouselFlowLayout
+        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize?.width : self.pageSize?.height
+        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        let currentPage = Int(floor((offset - pageSide! / 2) / pageSide!) + 1)
+        self.onScroll!(currentPage)
     }
 }

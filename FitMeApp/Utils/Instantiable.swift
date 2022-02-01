@@ -1,9 +1,8 @@
 //
 //  Instantiable.swift
-//  
+//  FitMeApp
 //
-//  Created by Pradeep Dahiya on 27.12.17.
-//  Copyright © 2017 Pradeep Dahiya. All rights reserved.
+//  Created by Pradeep Dahiya on 27/01/22.
 //
 
 import UIKit
