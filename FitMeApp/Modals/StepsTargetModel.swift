@@ -44,14 +44,14 @@ enum TargetsAttributes: String {
 enum HistoricalAttributes: String {
     case
     name = "name",
-    identifire = "identifire",
+    dateStamp = "dateStamp",
     steps = "steps",
     isActive = "isActive"
     
     
     static let getAll = [
         name,
-        identifire,
+        dateStamp,
         steps,
         isActive
     ]

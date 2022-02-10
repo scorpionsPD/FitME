@@ -311,7 +311,7 @@
                     <navigationItem key="navigationItem" title="Historical Data" id="25c-1A-Zzp"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="calenderView" destination="Tac-lU-DR0" id="ik9-N8-i32"/>
+                        <outlet property="calenderView" destination="Tac-lU-DR0" id="pk6-Fr-Iz9"/>
                         <outlet property="historicCollectionView" destination="EGR-cO-1zY" id="r82-rL-YqF"/>
                     </connections>
                 </viewController>
