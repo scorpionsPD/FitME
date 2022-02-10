@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  FitMeApp
 //
-//  Created by Pradeep Dahiya on 27/01/22.
+//  Created by Nishita Siddiqui on 27/01/22.
 //
 
 import UIKit

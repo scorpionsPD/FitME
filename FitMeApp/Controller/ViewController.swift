@@ -5,24 +5,64 @@
 //  Created by Pradeep Dahiya on 27/01/22.
 //
 import UIKit
+import MaterialComponents
 
 class ViewController: UIViewController  {
     
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-        
-    var popupDelegates: popupDelegates?
     
-    var stepTargetCellDataSource: TargetDataSource?
+    var floatingButton: MDCFloatingButton!
+    
+    var selectedRowStepsTargetObj: StepsTarget?{
+        didSet {
+            guard let _ = selectedRowStepsTargetObj else {
+                return
+            }
+            self.deleteRecordWithDate(rowObject: selectedRowStepsTargetObj!)
+        }
+    }
+            
+    var stepTargetCellDataSource: HomeDataSource?
 
+    var stepsTaken:StepsTarget?{
+        didSet{
+            guard stepsTaken != nil else { return }
+            self.infoLbl.text = kStepsTaken + ": " + "\(stepsTaken?.stepsTaken ?? 0)"
+            self.fetchTargets()
+        }
+        
+    }
     var items:[StepsTarget]?{
         didSet {
             guard let data = items else {
                 return
             }
-            self.stepTargetCellDataSource  = TargetDataSource(data: data, pSize: self.pageSize,collectionView: self.collectionView)
+//            self.stepTargetCellDataSource  = TargetDataSource(data: data, pSize: self.pageSize,collectionView: self.collectionView)
+//            DispatchQueue.main.async {
+//                self.collectionView.dataSource = self.stepTargetCellDataSource
+//                self.collectionView.delegate   = self.stepTargetCellDataSource
+//                self.collectionView.reloadData()
+//            }
+//            self.stepTargetCellDataSource?.onScroll = { curentPage in
+//                self.currentPage = curentPage
+//            }
+//            self.stepTargetCellDataSource?.onDeleteAction = { object in
+//                self.selectedRowStepsTargetObj = object
+//            }
+        }
+    }
+    var targetsArray:[Targets]?{
+        didSet{
+            guard let data = targetsArray else {
+                return
+            }
+            self.stepTargetCellDataSource  = HomeDataSource(data: data, pSize: self.pageSize,collectionView: self.collectionView, stepsTarget: stepsTaken!, activate: { target in
+                self.updateTargetState(target: target)
+            })
             DispatchQueue.main.async {
                 self.collectionView.dataSource = self.stepTargetCellDataSource
                 self.collectionView.delegate   = self.stepTargetCellDataSource
@@ -31,16 +71,19 @@ class ViewController: UIViewController  {
             self.stepTargetCellDataSource?.onScroll = { curentPage in
                 self.currentPage = curentPage
             }
+            self.stepTargetCellDataSource?.onDeleteAction = { object in
+                self.selectedRowStepsTargetObj = object
+            }
         }
+        
     }
-
     var currentPage: Int = 0 {
         didSet {
-            if currentPage < self.items?.count ?? 0 {
-            let obj = self.items?[self.currentPage]
-            self.targetLabel.text = kTarget + ": " + "\(obj?.target ?? 0)"
-            self.infoLbl.text = kStepsTaken + ": " + "\(obj?.stepsTaken ?? 0)"
-            self.dateLabel.text = kDate + ": " + "\(String(describing: obj?.timestamp))"
+            if currentPage < self.targetsArray?.count ?? 0 {
+            let obj = self.targetsArray?[self.currentPage]
+//            self.targetLabel.text = kTarget + ": " + "\(obj?.target ?? 0)"
+             //   self.infoLbl.text = kStepsTaken + ": " + "\(stepsTaken?.stepsTaken ?? 0)"
+       //     self.dateLabel.text = kDate + ": " + "\(String(describing: obj?.identifire))"
             }
         }
     }
@@ -64,26 +107,12 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
         self.setupLayout()
         self.setupAddStepsButton()
-        //self.insertRecord()
-        self.fetchData()
+        
         self.currentPage = 0
         self.addObserver()
         // Do any additional setup after loading the view.
     }
-}
-
-extension ViewController {
- func getFieldValues() -> Dictionary<String, AnyObject> {
-    var fieldDetails = [String: AnyObject]()
-    fieldDetails[StepsTargetAttributes.target.rawValue] = 7000 as AnyObject
-    fieldDetails[StepsTargetAttributes.stepsTaken.rawValue] = 1150 as AnyObject
-    fieldDetails[StepsTargetAttributes.timestamp.rawValue] = Date() as AnyObject//Date.currentTimeStamp
-    return fieldDetails
-}
-}
-
-extension ViewController : popupDelegates {
-    func didPressSaveBtn() {
-      //  CoreDataHelper.insertRecord(entity: <#NSManagedObject.Type#>, entityName: <#String#>, completion: <#(NSManagedObject, NSManagedObjectContext) -> ()#>)
-    } 
+    override func viewWillAppear(_ animated: Bool) {
+        self.fetchData()
+    }
 }

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Historical" representedClassName="Historical" syncable="YES" codeGenerationType="class">
+        <attribute name="identifire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="steps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wasDeleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
     <entity name="StepsTarget" representedClassName="StepsTarget" syncable="YES" codeGenerationType="class">
+        <attribute name="dateStamp" optional="YES" attributeType="String"/>
         <attribute name="stepsTaken" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="target" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timestamp" optional="YES" attributeType="String"/>
+        <attribute name="totalSteps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Targets" representedClassName="Targets" syncable="YES" codeGenerationType="class">
+        <attribute name="identifire" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="steps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="StepsTarget" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Historical" positionX="27" positionY="36" width="128" height="104"/>
+        <element name="StepsTarget" positionX="118.96484375" positionY="9.1015625" width="128" height="89"/>
+        <element name="Targets" positionX="-63" positionY="9" width="128" height="89"/>
     </elements>
 </model>

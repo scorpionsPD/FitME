@@ -1,0 +1,72 @@
+//
+//  HomeDataSource.swift
+//  FitMeApp
+//
+//  Created by Pradeep Dahiya on 03/02/22.
+//
+import UIKit
+import Foundation
+
+
+class HomeDataSource: NSObject {
+    var dataArray:[Targets]?
+    var collctionView:UICollectionView?
+    var pageSize:CGSize?
+    var onScroll:((Int)->())?
+    var onDeleteAction:((StepsTarget)->())?
+    var activateTarget:((Targets)->())?
+    
+    var stepsTarget:StepsTarget?
+    init(data:[Targets],pSize:CGSize,collectionView:UICollectionView,stepsTarget:StepsTarget,activate:@escaping ((Targets)->())) {
+        super.init()
+        self.dataArray = data
+        self.collctionView = collectionView
+        self.pageSize = pSize
+        self.stepsTarget = stepsTarget
+        self.activateTarget = activate
+    }
+}
+extension HomeDataSource:UICollectionViewDataSource, UICollectionViewDelegate
+{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.dataArray?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CarouselCollectionViewCell.self), for: indexPath) as! CarouselCollectionViewCell
+        if self.dataArray?[indexPath.item] != nil{//items[(indexPath as
+            let obj = self.dataArray?[indexPath.row]
+            if let stepsTaken = self.dataArray![indexPath.item].isActive ? stepsTarget?.stepsTaken : 0 {
+                cell.setCircularProgressView(stepsCompleted: Int(stepsTaken), stepsTarget: Int(obj?.steps ?? 0))
+            }
+            cell.targetBtn.setTitle(obj?.name, for: .normal)
+            
+            cell.targetBtn.backgroundColor = self.dataArray![indexPath.item].isActive ? .green : .darkGray
+            cell.didPressTarget = { sender in
+                if let _ = sender as? UIButton {
+                    self.activateTarget!(obj!)
+                }
+            }
+       }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+        if let obj = self.dataArray?[indexPath.row] {
+       // self.onDeleteAction!(obj)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.collctionView!.collectionViewLayout as! CollectionViewCarouselFlowLayout
+        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize?.width : self.pageSize?.height
+        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        let currentPage = Int(floor((offset - pageSide! / 2) / pageSide!) + 1)
+        self.onScroll!(currentPage)
+    }
+}

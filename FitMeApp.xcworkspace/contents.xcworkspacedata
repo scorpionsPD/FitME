@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TargetsEntity/Targets+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:TargetsEntity/Targets+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:FitMeApp.xcodeproj">
    </FileRef>
    <FileRef

@@ -9,35 +9,55 @@ import Foundation
 import CoreData
 
 /**
-    Enum for Event Entity member fields
-*/
+ Enum for Event Entity member fields
+ */
 enum StepsTargetAttributes: String {
     case
     stepsTaken    = "stepsTaken",
-    target        = "target",
-    timestamp     = "timestamp"
-
-
+    timestamp     = "timestamp",
+    dateStamp = "dateStamp",
+    totalSteps = "totalSteps"
     static let getAll = [
         stepsTaken,
-        target,
-        timestamp
+        timestamp,
+        dateStamp,
+        totalSteps
     ]
 }
 
-//@objc(StepsTarget)
-////
-/////**
-//    The Core Data Model: StepsTargetAttributes
+enum TargetsAttributes: String {
+    case
+    name = "name",
+    identifire = "identifire",
+    steps = "steps",
+    isActive = "isActive"
+    
+    
+    static let getAll = [
+        name,
+        identifire,
+        steps,
+        isActive
+    ]
+}
 
-extension StepsTarget {
-//
-//        @nonobjc public class func newFetchRequest() -> NSFetchRequest<StepsTarget> {
-//            return NSFetchRequest<StepsTarget>(entityName: EntityTypes.StepsTargetEntity.rawValue)
-//        }
+enum HistoricalAttributes: String {
+    case
+    name = "name",
+    identifire = "identifire",
+    steps = "steps",
+    isActive = "isActive"
+    
+    
+    static let getAll = [
+        name,
+        identifire,
+        steps,
+        isActive
+    ]
+}
 
-//        @NSManaged public var expiryDate: NSDate?
-//        @NSManaged public var number: String?
-//        @NSManaged public var ofUser: User?
-
+struct SingleTarget {
+    var targetSteps:Int?
+    var targetName:String?
 }

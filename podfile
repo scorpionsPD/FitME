@@ -6,5 +6,5 @@ use_frameworks!
 target 'FitMeApp' do
 
 pod 'MaterialComponents'
-
+pod 'FSCalendar'
 end

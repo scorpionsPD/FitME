@@ -1,4 +1,5 @@
 PODS:
+  - FSCalendar (2.8.2)
   - MaterialComponents (124.2.0):
     - MaterialComponents/ActionSheet (= 124.2.0)
     - "MaterialComponents/ActionSheet+Theming (= 124.2.0)"
@@ -646,10 +647,12 @@ PODS:
   - MotionInterchange (3.0.0)
 
 DEPENDENCIES:
+  - FSCalendar
   - MaterialComponents
 
 SPEC REPOS:
   trunk:
+    - FSCalendar
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -657,12 +660,13 @@ SPEC REPOS:
     - MotionInterchange
 
 SPEC CHECKSUMS:
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
 
-PODFILE CHECKSUM: 8b4137c91a94ee28a5c99a5f7d25d39be626c50a
+PODFILE CHECKSUM: 409dd1a0293bfc4b2caf008829024aeb0c8350a1
 
 COCOAPODS: 1.11.2
