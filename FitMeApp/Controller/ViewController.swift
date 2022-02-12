@@ -9,11 +9,14 @@ import MaterialComponents
 
 class ViewController: UIViewController  {
     
+    @IBOutlet weak var barGraph: BarChartView!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var infoLbl: UILabel!
-    @IBOutlet weak var bottomView: UIView!
+  //  @IBOutlet weak var infoLbl: UILabel!
+  //  @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+   lazy var values = [Double]()
+    
     
     var floatingButton: MDCFloatingButton!
     
@@ -31,7 +34,8 @@ class ViewController: UIViewController  {
     var stepsTaken:StepsTarget?{
         didSet{
             guard stepsTaken != nil else { return }
-            self.infoLbl.text = kStepsTaken + ": " + "\(stepsTaken?.stepsTaken ?? 0)"
+            // self.infoLbl.text = kStepsTaken + ": " + "\(stepsTaken?.stepsTaken ?? 0)"
+            
             self.fetchTargets()
         }
         
@@ -74,6 +78,10 @@ class ViewController: UIViewController  {
             self.stepTargetCellDataSource?.onDeleteAction = { object in
                 self.selectedRowStepsTargetObj = object
             }
+            if values.count > 0 {
+                barGraph.maxValue = (self.values.max() ?? 20) + 20
+                barGraph.drawChart(self.values)
+            }
         }
         
     }
@@ -110,6 +118,9 @@ class ViewController: UIViewController  {
         
         self.currentPage = 0
         self.addObserver()
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {

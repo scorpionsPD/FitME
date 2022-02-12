@@ -48,9 +48,9 @@ extension CoreDataHelper {
         }
         do {
             let result = try managedObjectContext.fetch(fetchRequest)
-            if result.count > 0 {
+            //if result.count > 0 {
                 completion(result)
-            }
+           // }
         } catch let error as NSError{
             print("Could not save. \(error), \(error.userInfo)")
         }

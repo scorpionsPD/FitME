@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B03ADC8CDC2B606DE95CAF61 /* Pods_FitMeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C32E94684B743A18ADAC17 /* Pods_FitMeApp.framework */; };
 		F305C98C27AD6ADC00600BFB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305C98B27AD6ADC00600BFB /* Helper.swift */; };
+		F3B3F83627B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83327B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift */; };
+		F3B3F83927B83117004C1391 /* BarChartClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83827B83117004C1391 /* BarChartClass.swift */; };
+		F3B3F83B27B8389A004C1391 /* ViewController+Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83A27B8389A004C1391 /* ViewController+Graph.swift */; };
 		F3B68EDD27AA7B9400854A36 /* ManageTargetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B68EDC27AA7B9400854A36 /* ManageTargetsViewController.swift */; };
 		F3B68EE827AAE70900854A36 /* ManageTargetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B68EE627AAE70900854A36 /* ManageTargetTableViewCell.swift */; };
 		F3B68EE927AAE70900854A36 /* ManageTargetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3B68EE727AAE70900854A36 /* ManageTargetTableViewCell.xib */; };
@@ -58,6 +61,9 @@
 		94C32E94684B743A18ADAC17 /* Pods_FitMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D295DCFBE516D0FC024CE8B4 /* Pods-FitMeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitMeApp.release.xcconfig"; path = "Target Support Files/Pods-FitMeApp/Pods-FitMeApp.release.xcconfig"; sourceTree = "<group>"; };
 		F305C98B27AD6ADC00600BFB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F3B3F83327B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoricalDataViewController+CalenderDelegates.swift"; sourceTree = "<group>"; };
+		F3B3F83827B83117004C1391 /* BarChartClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartClass.swift; sourceTree = "<group>"; };
+		F3B3F83A27B8389A004C1391 /* ViewController+Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Graph.swift"; sourceTree = "<group>"; };
 		F3B68EDC27AA7B9400854A36 /* ManageTargetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTargetsViewController.swift; sourceTree = "<group>"; };
 		F3B68EE627AAE70900854A36 /* ManageTargetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTargetTableViewCell.swift; sourceTree = "<group>"; };
 		F3B68EE727AAE70900854A36 /* ManageTargetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageTargetTableViewCell.xib; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 				FB2B29E727AD2DCD00CF970E /* Historical */,
 				FB9383B227A81481007D0EDB /* ViewController+Extension.swift */,
 				FB25902427A3D6FD00B93DE1 /* ViewController.swift */,
+				F3B3F83A27B8389A004C1391 /* ViewController+Graph.swift */,
 				FBA701FC27A7E1BB000C7E9F /* ViewController+DBHelper.swift */,
 				FBA701FF27A7F32B000C7E9F /* ViewController+SetupUI.swift */,
 				FBA7020127A7F35A000C7E9F /* ViewController+NotificationCenter.swift */,
@@ -238,6 +245,7 @@
 		FB2B29E727AD2DCD00CF970E /* Historical */ = {
 			isa = PBXGroup;
 			children = (
+				F3B3F83327B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift */,
 				FB2B29E827AD2E7E00CF970E /* HistoricalDataViewController.swift */,
 				FB2B29F927AD4B2200CF970E /* HistoricalDataViewController+DBHelper.swift */,
 			);
@@ -348,6 +356,7 @@
 		FBDD0E9227A41C0F002E38A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F3B3F83827B83117004C1391 /* BarChartClass.swift */,
 				FBDD0E9327A41C0F002E38A7 /* Instantiable.swift */,
 				F305C98B27AD6ADC00600BFB /* Helper.swift */,
 			);
@@ -475,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B68EEB27AAF2F500854A36 /* TargetsData.swift in Sources */,
+				F3B3F83927B83117004C1391 /* BarChartClass.swift in Sources */,
 				FB83308727AA8E0A00A3F409 /* Extension_UIAlertViewController.swift in Sources */,
 				FB25903C27A3DCA200B93DE1 /* CarouselCollectionViewCell.swift in Sources */,
 				F3B68EE827AAE70900854A36 /* ManageTargetTableViewCell.swift in Sources */,
@@ -498,11 +508,13 @@
 				FBA701FB27A7E0DE000C7E9F /* Constants.swift in Sources */,
 				F305C98C27AD6ADC00600BFB /* Helper.swift in Sources */,
 				FBDD0E9427A41C0F002E38A7 /* Instantiable.swift in Sources */,
+				F3B3F83627B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift in Sources */,
 				FB25902927A3D6FD00B93DE1 /* EntityTypes.swift in Sources */,
 				F3B68EDD27AA7B9400854A36 /* ManageTargetsViewController.swift in Sources */,
 				FB9C1E0627A29AB400C9C09B /* FitMeApp.xcdatamodeld in Sources */,
 				FB32D14F27AC07F300BF88A1 /* ManageTargetsViewController+CustomPopup.swift in Sources */,
 				F3B68EEF27AAFDCF00854A36 /* ManageHeader.swift in Sources */,
+				F3B3F83B27B8389A004C1391 /* ViewController+Graph.swift in Sources */,
 				F3B68EF327AC108700854A36 /* HomeDataSource.swift in Sources */,
 				FB2B29E927AD2E7E00CF970E /* HistoricalDataViewController.swift in Sources */,
 				FB25902D27A3D6FD00B93DE1 /* SceneDelegate.swift in Sources */,
