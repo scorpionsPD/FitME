@@ -12,6 +12,9 @@ class ManageTargetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var targetTitle: UILabel!
     @IBOutlet weak var targetSteps: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    
+    var onEditPress:((Int)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +23,9 @@ class ManageTargetTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    @IBAction func editPressed(_ sender: Any) {
+        onEditPress!(8)
+    }
 }

@@ -28,6 +28,13 @@ class Helper : NSObject {
         dateFormatter.timeStyle = .short
         return dateFormatter.string(from: date)
     }
+    class func getEditable() -> Bool{
+        return UserDefaults.standard.bool(forKey: kEditable)
+    }
+    class func setEditable(value:Bool) {
+        UserDefaults.standard.set(value, forKey: kEditable)
+        UserDefaults.standard.synchronize()
+    }
 }
 
 

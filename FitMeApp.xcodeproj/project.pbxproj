@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		B03ADC8CDC2B606DE95CAF61 /* Pods_FitMeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C32E94684B743A18ADAC17 /* Pods_FitMeApp.framework */; };
 		F305C98C27AD6ADC00600BFB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305C98B27AD6ADC00600BFB /* Helper.swift */; };
+		F362FEDE27BD565000C600DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEDD27BD565000C600DF /* SettingsViewController.swift */; };
+		F362FEE827BDA6BE00C600DF /* MaterialShowcase+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE027BDA6BD00C600DF /* MaterialShowcase+Calculations.swift */; };
+		F362FEE927BDA6BE00C600DF /* MaterialShowcaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE227BDA6BD00C600DF /* MaterialShowcaseController.swift */; };
+		F362FEEA27BDA6BE00C600DF /* MaterialShowcaseSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE327BDA6BD00C600DF /* MaterialShowcaseSequence.swift */; };
+		F362FEEB27BDA6BE00C600DF /* MaterialShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE427BDA6BD00C600DF /* MaterialShowcase.swift */; };
+		F362FEEC27BDA6BE00C600DF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE527BDA6BD00C600DF /* Utility.swift */; };
+		F362FEED27BDA6BE00C600DF /* MaterialShowcaseInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362FEE627BDA6BD00C600DF /* MaterialShowcaseInstructionView.swift */; };
 		F3B3F83627B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83327B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift */; };
 		F3B3F83927B83117004C1391 /* BarChartClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83827B83117004C1391 /* BarChartClass.swift */; };
 		F3B3F83B27B8389A004C1391 /* ViewController+Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F83A27B8389A004C1391 /* ViewController+Graph.swift */; };
@@ -61,6 +68,15 @@
 		94C32E94684B743A18ADAC17 /* Pods_FitMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D295DCFBE516D0FC024CE8B4 /* Pods-FitMeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitMeApp.release.xcconfig"; path = "Target Support Files/Pods-FitMeApp/Pods-FitMeApp.release.xcconfig"; sourceTree = "<group>"; };
 		F305C98B27AD6ADC00600BFB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F362FEDD27BD565000C600DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F362FEE027BDA6BD00C600DF /* MaterialShowcase+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MaterialShowcase+Calculations.swift"; sourceTree = "<group>"; };
+		F362FEE127BDA6BD00C600DF /* MaterialShowcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialShowcase.h; sourceTree = "<group>"; };
+		F362FEE227BDA6BD00C600DF /* MaterialShowcaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcaseController.swift; sourceTree = "<group>"; };
+		F362FEE327BDA6BD00C600DF /* MaterialShowcaseSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcaseSequence.swift; sourceTree = "<group>"; };
+		F362FEE427BDA6BD00C600DF /* MaterialShowcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcase.swift; sourceTree = "<group>"; };
+		F362FEE527BDA6BD00C600DF /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F362FEE627BDA6BD00C600DF /* MaterialShowcaseInstructionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcaseInstructionView.swift; sourceTree = "<group>"; };
+		F362FEE727BDA6BD00C600DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B3F83327B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoricalDataViewController+CalenderDelegates.swift"; sourceTree = "<group>"; };
 		F3B3F83827B83117004C1391 /* BarChartClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartClass.swift; sourceTree = "<group>"; };
 		F3B3F83A27B8389A004C1391 /* ViewController+Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Graph.swift"; sourceTree = "<group>"; };
@@ -137,6 +153,29 @@
 				D295DCFBE516D0FC024CE8B4 /* Pods-FitMeApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F362FEDC27BD562F00C600DF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F362FEDD27BD565000C600DF /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F362FEDF27BDA6BD00C600DF /* MaterialShowcase */ = {
+			isa = PBXGroup;
+			children = (
+				F362FEE027BDA6BD00C600DF /* MaterialShowcase+Calculations.swift */,
+				F362FEE127BDA6BD00C600DF /* MaterialShowcase.h */,
+				F362FEE227BDA6BD00C600DF /* MaterialShowcaseController.swift */,
+				F362FEE327BDA6BD00C600DF /* MaterialShowcaseSequence.swift */,
+				F362FEE427BDA6BD00C600DF /* MaterialShowcase.swift */,
+				F362FEE527BDA6BD00C600DF /* Utility.swift */,
+				F362FEE627BDA6BD00C600DF /* MaterialShowcaseInstructionView.swift */,
+				F362FEE727BDA6BD00C600DF /* Info.plist */,
+			);
+			path = MaterialShowcase;
 			sourceTree = "<group>";
 		};
 		F3B68EDB27AA7B6200854A36 /* ManageTargets */ = {
@@ -309,6 +348,7 @@
 		FB9C1DFA27A29AB400C9C09B /* FitMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				F362FEDC27BD562F00C600DF /* Settings */,
 				FB2B29EA27AD354500CF970E /* HistoricCollectionItems */,
 				FB32D14727ABE18800BF88A1 /* GradientView */,
 				F3B68EED27AAFD7E00854A36 /* ManageTableHeader */,
@@ -356,6 +396,7 @@
 		FBDD0E9227A41C0F002E38A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F362FEDF27BDA6BD00C600DF /* MaterialShowcase */,
 				F3B3F83827B83117004C1391 /* BarChartClass.swift */,
 				FBDD0E9327A41C0F002E38A7 /* Instantiable.swift */,
 				F305C98B27AD6ADC00600BFB /* Helper.swift */,
@@ -493,6 +534,7 @@
 				FB32D14B27AC06FB00BF88A1 /* ManageTargetsViewController+SetupUI.swift in Sources */,
 				FB25903327A3D9E400B93DE1 /* StepsTargetModel.swift in Sources */,
 				FB2B29ED27AD358100CF970E /* HistoricCollectionCell.swift in Sources */,
+				F362FEEA27BDA6BE00C600DF /* MaterialShowcaseSequence.swift in Sources */,
 				FB25902F27A3D6FD00B93DE1 /* CoreDataHelper.swift in Sources */,
 				FBA7020227A7F35A000C7E9F /* ViewController+NotificationCenter.swift in Sources */,
 				FB2B29F427AD3F7800CF970E /* HistoricDataSource.swift in Sources */,
@@ -506,6 +548,9 @@
 				FB25902C27A3D6FD00B93DE1 /* AppDelegate.swift in Sources */,
 				FB83308A27AA8FA200A3F409 /* BRCircularProgressView.swift in Sources */,
 				FBA701FB27A7E0DE000C7E9F /* Constants.swift in Sources */,
+				F362FEE927BDA6BE00C600DF /* MaterialShowcaseController.swift in Sources */,
+				F362FEDE27BD565000C600DF /* SettingsViewController.swift in Sources */,
+				F362FEEB27BDA6BE00C600DF /* MaterialShowcase.swift in Sources */,
 				F305C98C27AD6ADC00600BFB /* Helper.swift in Sources */,
 				FBDD0E9427A41C0F002E38A7 /* Instantiable.swift in Sources */,
 				F3B3F83627B67BD5004C1391 /* HistoricalDataViewController+CalenderDelegates.swift in Sources */,
@@ -514,13 +559,16 @@
 				FB9C1E0627A29AB400C9C09B /* FitMeApp.xcdatamodeld in Sources */,
 				FB32D14F27AC07F300BF88A1 /* ManageTargetsViewController+CustomPopup.swift in Sources */,
 				F3B68EEF27AAFDCF00854A36 /* ManageHeader.swift in Sources */,
+				F362FEED27BDA6BE00C600DF /* MaterialShowcaseInstructionView.swift in Sources */,
 				F3B3F83B27B8389A004C1391 /* ViewController+Graph.swift in Sources */,
+				F362FEEC27BDA6BE00C600DF /* Utility.swift in Sources */,
 				F3B68EF327AC108700854A36 /* HomeDataSource.swift in Sources */,
 				FB2B29E927AD2E7E00CF970E /* HistoricalDataViewController.swift in Sources */,
 				FB25902D27A3D6FD00B93DE1 /* SceneDelegate.swift in Sources */,
 				FB9383B327A81481007D0EDB /* ViewController+Extension.swift in Sources */,
 				FBA701FD27A7E1BB000C7E9F /* ViewController+DBHelper.swift in Sources */,
 				FB25903827A3DB5500B93DE1 /* CollectionViewCarouselFlowLayout.swift in Sources */,
+				F362FEE827BDA6BE00C600DF /* MaterialShowcase+Calculations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

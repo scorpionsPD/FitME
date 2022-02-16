@@ -9,7 +9,7 @@ import UIKit
 class TargetsData: NSObject {
     var stepsData: [Targets]?
     var onDeleteAction:((Targets)->())?
-
+    var onEditPress:((Targets)->())?
     init(data:[Targets]) {
         self.stepsData = data
     }
@@ -27,6 +27,13 @@ extension TargetsData : UITableViewDataSource{
             cell.targetSteps.text = String(describing: stepsData![indexPath.row].steps)
             cell.targetSteps.textColor = stepsData![indexPath.row].isActive ? .orange : .black
             cell.targetTitle.text = stepsData![indexPath.row].name
+            cell.editButton.isHidden = Helper.getEditable()
+            cell.editButton.setTitle("", for: .normal)
+            cell.onEditPress = { _ in
+                if let obj = self.stepsData?[indexPath.row] {
+                self.onEditPress!(obj)
+                }
+            }
             return cell
         }
         return UITableViewCell()

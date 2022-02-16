@@ -42,9 +42,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-uI-VoF">
+                                <rect key="frame" x="242" y="0.0" width="46" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="o6J-SI-ey9"/>
+                                    <constraint firstAttribute="width" constant="46" id="pcb-9G-VZ9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system"/>
+                                <connections>
+                                    <action selector="editPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VE6-8T-3qZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
+                            <constraint firstItem="d9B-uI-VoF" firstAttribute="top" secondItem="7pe-ea-K63" secondAttribute="top" id="3N9-ZN-jse"/>
                             <constraint firstItem="nsU-Ws-4ou" firstAttribute="top" secondItem="7pe-ea-K63" secondAttribute="top" id="6CL-iw-0dd"/>
                             <constraint firstItem="4JU-28-gUh" firstAttribute="trailing" secondItem="7pe-ea-K63" secondAttribute="trailingMargin" id="7bl-TH-iKe"/>
                             <constraint firstAttribute="height" constant="128" id="Bbp-9j-k8L"/>
@@ -52,6 +66,7 @@
                             <constraint firstItem="d0c-d3-Iof" firstAttribute="top" secondItem="7pe-ea-K63" secondAttribute="top" constant="11" id="Mxp-oZ-zIo"/>
                             <constraint firstAttribute="trailing" secondItem="nsU-Ws-4ou" secondAttribute="trailing" id="RKa-pJ-M8Y"/>
                             <constraint firstItem="nsU-Ws-4ou" firstAttribute="leading" secondItem="d0c-d3-Iof" secondAttribute="trailing" id="ZSX-WY-Iqi"/>
+                            <constraint firstAttribute="trailing" secondItem="d9B-uI-VoF" secondAttribute="trailing" id="dy4-Ky-yw2"/>
                             <constraint firstItem="d0c-d3-Iof" firstAttribute="leading" secondItem="4JU-28-gUh" secondAttribute="leading" id="hLs-GK-WDU"/>
                             <constraint firstItem="nsU-Ws-4ou" firstAttribute="centerY" secondItem="7pe-ea-K63" secondAttribute="centerY" id="oKB-eZ-Jlw"/>
                             <constraint firstItem="d0c-d3-Iof" firstAttribute="leading" secondItem="7pe-ea-K63" secondAttribute="leadingMargin" id="rbe-QB-urR"/>
@@ -86,6 +101,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="editButton" destination="d9B-uI-VoF" id="A6d-HL-MpN"/>
                 <outlet property="targetSteps" destination="d0c-d3-Iof" id="Pz3-IC-xdy"/>
                 <outlet property="targetTitle" destination="4JU-28-gUh" id="cKZ-gs-8sF"/>
             </connections>
@@ -93,6 +109,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="steps" width="268" height="248"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

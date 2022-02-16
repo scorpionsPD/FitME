@@ -84,6 +84,37 @@ extension CoreDataHelper {
             print(error)
         }
     }
+    
+    func updateTarget<T:NSManagedObject>(entityTable: T.Type,identifierValue: String,steps:Int64,name:String,completion:(Bool)->()) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = T.fetchRequest()
+        let predicate = NSPredicate(format: "identifire = %@",identifierValue)
+        fetchRequest.predicate = predicate
+        do {
+            let object = try managedObjectContext.fetch(fetchRequest)
+            if object.count == 1
+            {
+                let objectUpdate = object.first as! NSManagedObject
+                objectUpdate.setValue(steps, forKey: "steps")
+                objectUpdate.setValue(name, forKey: "name")
+                do{
+                    try managedObjectContext.save()
+                    completion(true)
+                }
+                catch
+                {
+                    print(error)
+                }
+            }
+        }
+        catch
+        {
+            print(error)
+        }
+    }
+    
     func updateTargetState<T:NSManagedObject>(entityTable: T.Type,target:Targets,completion:(Bool)->()) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }

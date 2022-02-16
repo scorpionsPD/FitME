@@ -22,6 +22,15 @@ class ManageTargetsViewController: UIViewController {
         }
     }
     
+    var selectedTargetToEdit: Targets?{
+        didSet {
+            guard let _ = selectedTargetToEdit else {
+                return
+            }
+            self.showAddPopUP(isUpdate: true)
+        }
+    }
+    
     var taargetDataSource:TargetsData?
     
     var targetsArray:[Targets]?{
@@ -35,6 +44,9 @@ class ManageTargetsViewController: UIViewController {
             self.targetsTable.reloadData()
             self.taargetDataSource?.onDeleteAction = {object in
                 self.selectedRowTargetObj = object
+            }
+            self.taargetDataSource?.onEditPress = { object in
+                self.selectedTargetToEdit = object
             }
         }
     }
